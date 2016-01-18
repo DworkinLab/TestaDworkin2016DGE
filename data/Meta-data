@@ -1,0 +1,136 @@
+Meta-data for the data set associated with the publication
+
+Dworkin I, Gibson G.2006. Epidermal growth factor receptor and transforming growth factor-beta signaling contributes to variation for wing shape in Drosophila melanogaster.Genetics. 173(3):1417-31
+PMID: 16648592 
+
+ and a subset of the data was also used in:
+
+Dworkin, I., Anderson, J.A, Idaghour, Y., Kennerly, E.M., Stone, E.A., Gibson, G. 2011. The effects of weak genetic perturbations on the transcriptome of the wing imaginal disc, and its association with wing shape in Drosophila melanogaster. GENETICS. In Press.
+
+This data was provided by (and for questions please contact): 
+Ian Dworkin 
+Department of Zoology
+203 Natural Sciences Bldg.
+Michigan State University
+East Lansing, MI
+idworkin "AT" msu dot edu
+
+
+This information is for two different files.
+Dworkin_Gibson_2006_PC.txt # delimited txt file containing procrustes coordinates.
+Dworkin_Gibson_2006_LM.TPS # delimited txt file containing raw landmark data (no superimposition, resizing or centering).
+
+
+# There should be 7372 rows in Dworkin_Gibson_2006_PC.txt 
+# based on 
+grep IMAGE= Dworkin_Gibson_2006_LM.TPS | wc -l 
+# There are also 7372 individuals.
+
+
+# information for file Dworkin_Gibson_2006_PC.txt
+# The RawCoord.1-RawCoord.18 are the landmark "residuals" after Procrustes superimposition.
+Identifier = unique identifier for the image
+BACKGROUND = one of two wild-type backgrounds (Oregon-R & Samarkand)
+LINE       = The P-element identifier we used (based on the Bloomington Stock number)
+GENOTYPE   = (p for P-element bearing individual (mutant), w for wild-type)
+SEX       =  Male or Female
+RawCoord1
+RawCoord2
+RawCoord3
+RawCoord4
+RawCoord5
+RawCoord6
+RawCoord7
+RawCoord8
+RawCoord9
+RawCoord10
+RawCoord11
+RawCoord12
+RawCoord13
+RawCoord14
+RawCoord15
+RawCoord16
+RawCoord17
+RawCoord18
+Centroid Size = Centroid Size for each wing
+Log Centroid Size = log centroid size for each wing.
+
+
+
+
+#### Line names and genes
+Bloomington_stock_number	Gene	Allele
+2513	Argos	W11
+3045	omb	md653
+5404	sax	sax4
+6342	cv-2	225-3
+6372	Gap1	mip-w[+]
+10212	ksr	J5E2
+10305	dad	J1E4
+10372	drk	k02401
+10385	egfr	k05115
+10413	bs/DSRF	k07909
+10418	star	k09530
+10462	spi	s3547
+10474	Mad	k00237
+10478	shn	k00401
+10490	ed	k01102
+10514	ptc	k02507
+10842	tsh	A3-2-66
+10911	sd	E3
+11156	cos	k16101
+11191	tkv	k19713
+11207	babo	k16912
+11843	csw	G0170
+12088	Trl	S2325
+12413	rho-AP	BG00314
+12752	PKA	BG02142
+12772	sbb	BG01610
+12862	mam	BG02477
+12916	psq	kg00811
+12945	osa	kg03117
+13311	RAS-GAP	kg02382
+13535	pnt	kg04968
+13751	src42A	kg02515
+13943	drk	kg03077
+13944	cbl	kg03080
+14189	mam	kg02641
+14208	rho-6	kg05638
+14268	dpp	kg04600
+14321	rho-2	kg07115
+14345	PKA-C-3	kg00222
+14364	p38b	kg01337
+14403	tkv	kg01923
+14541	CG3957	kg07581
+14578	mad	kg00581
+14638	ast	kg07563
+14694	dpp	kg08191
+14901	rho1_kinase	kg01774
+14920	sax	kg07525
+14953	brinker	kg08470
+14986	rho-6	kg09603
+15028	RAS85D	EY00505
+
+
+
+
+# Some notes about individual images
+Ore 03045  the landmarks 8 and 9 sometimes meet the margin in odd ways, may want to exclude them from the analysis
+
+Ore 10413 Many veins do not intersect properly with wing. Specifically lm1,8, and 9
+Landmark 8 should be ok for analysis, but exclude 1 and 9. The phenotypes of landmark 9 is similar to that found for Ore 03045. The  mini vein that sometimes appears between the posterior crossveins is enhanced in Ore10413.
+
+Ore 11191 Landmark number 9 forks occasionally. Try the analysis with and without this landmark.
+
+Ore 14403 Landmark one bends sometimes so that it is parallel to the margin 9 and does not meet it). ~4 samples. Try analysis with and without this landmark.
+
+Sam 14189 (rep 2) ~10% of P element individuals have a forked vein for LM9
+
+REP2
+
+In general REP2 Oregon flies show some strange LM 1and LM 9 issues
+
+Ore 3045 rep2 extra vein material around LM 8, and 9 shows an uncharacteristic bend.
+ Worse in males where there is severe notching at margin, with additional vein material. Lm has extra vein material in some samples.
+
+Ore 10413 , Lm1,Lm9 and to a lesser extent LM8 all have problems (wandering veins, extra vein material, and not meeting the margin). Lm8 (and possibly lm9 ) is probably ok to use.
